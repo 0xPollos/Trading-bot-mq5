@@ -1,6 +1,7 @@
 //+------------------------------------------------------------------+
-//|                   AutoCompoundEA v1.2 - Risk 10%, RR 1:2         |
-//|                                by Pollos                         |
+//|               AutoCompoundEA v1.2 - Risk 10%, RR 1:2             |
+//|                             by Pollos                            |
+//|            Join My Community https://t.me/traderoutlook          |
 //+------------------------------------------------------------------+
 #property strict
 
