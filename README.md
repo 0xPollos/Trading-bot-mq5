@@ -1,0 +1,1 @@
+# AutoCompoundEA.mq5
