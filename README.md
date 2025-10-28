@@ -64,3 +64,13 @@ How to load:
 
 ## 📊 Backtest Example
 Example settings:
+
+- Initial Balance: $10
+- Risk: 10%
+- Reward Ratio: 1:2
+- Pair: XAUUSD
+- Timeframe: M15
+
+> Expected growth: balance compounds dynamically as profits accumulate.
+
+---
