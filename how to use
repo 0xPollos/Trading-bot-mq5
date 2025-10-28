@@ -1,0 +1,79 @@
+EA ini sifatnya auto-compounding — jadi fokus utamanya bukan sinyal entry yang agresif, tapi money management cerdas.
+
+  1. Persiapan Awal
+
+Pastikan kamu sudah punya:
+
+✅ MetaTrader 5 (MT5) — versi terbaru.
+✅ Akun demo atau cent dulu (jangan langsung live).
+✅ File AutoCompoundEA.mq5 dari repo yang kita buat.
+
+  2. Instalasi File EA
+
+- Buka MetaTrader 5
+- Klik menu File → Open Data Folder
+- Masuk ke folder: "MQL5 → Experts"
+- Paste file AutoCompoundEA.mq5 ke dalam folder itu
+- Tutup dan buka ulang MT5
+- Di Navigator panel, klik kanan → Refresh
+- EA akan muncul di daftar Expert Advisors
+
+  3. Attach EA ke Chart
+
+- Buka chart XAUUSD (Gold)
+- Timeframe disarankan: M5, M15, atau M30
+- Drag & drop EA AutoCompoundEA ke chart
+- Di tab Inputs, sesuaikan parameter:
+
+| Parameter                | Penjelasan                                                          |
+| ------------------------ | ------------------------------------------------------------------- |
+| **RiskPercent**          | Jumlah risiko tiap trade, default = `5.0` (berarti 5% dari balance) |
+| **RR**                   | Risk-to-Reward ratio (default 3 berarti 1:3)                        |
+| **StopLossPoints**       | SL dalam “points” (misal 150 = 15 pips di XAUUSD)                   |
+| **SignalMode**           | Pilihan sinyal: `0 = MA`, `1 = FVG`, `2 = OB`                       |
+| **UseATRforSL**          | Jika `true`, SL dihitung otomatis pakai ATR                         |
+| **MagicNumber**          | Nomor unik untuk membedakan EA ini dari EA lain                     |
+| **TradeBuy / TradeSell** | Aktifkan hanya buy/sell jika ingin satu arah saja                   |
+| **MaxLots**              | Batas maksimal lot agar EA tidak terlalu agresif                    |
+
+  4. Aktifkan AutoTrading
+
+- Pastikan tombol Algo Trading (di toolbar MT5) berwarna hijau
+- Lihat di chart — harus muncul icon senyum “🙂” di kanan atas (menandakan EA aktif)
+
+  5. Cara Kerja EA
+
+- Setiap kali sinyal muncul sesuai mode:
+- EA menghitung otomatis lot berdasarkan:
+  Lot = \frac{\text{Balance} \times \text{Risk%}}{\text{SL (points)}}
+- EA pasang trade dengan SL dan TP otomatis:
+  - SL = sesuai "StopLossPoints"
+  - TP = SL × "RR"
+- Setelah profit, lot akan naik otomatis karena balance naik (auto-compound)
+- Jika loss, lot turun otomatis karena balance turun
+
+  6. Pilihan Signal Mode
+
+| SignalMode | Tipe                     | Ciri                                        | Cocok untuk         |
+| ---------- | ------------------------ | ------------------------------------------- | ------------------- |
+| `0`        | **MA Crossover**         | Entry ketika MA fast menembus MA slow       | Trend following     |
+| `1`        | **FVG (Fair Value Gap)** | Entry di retrace area gap                   | Scalping & intraday |
+| `2`        | **OB (Order Block)**     | Entry di zona OB terakhir sebelum move kuat | Smart money concept |
+
+  📌 Kamu bisa ganti mode ini tanpa ganti EA — cukup ubah "SignalMode" di parameter EA, klik "OK" lagi.
+
+  7. Tips Profesional
+
+- Gunakan akun demo minimal 2 minggu untuk menguji performa & SL/TP.
+- Ganti timeframe sesuai sinyal:
+  - MA → M15–H1
+  - FVG → M5–M15
+  - OB → M15–H1
+- Perhatikan spread XAUUSD — ideal <30 points.
+- EA tidak martingale / averaging — jadi aman dari overexposure.
+
+  8. Cara Melihat Hasil
+
+- Lihat di tab “Trade” untuk posisi aktif
+- Lihat di tab “Account History” untuk hasil trade sebelumnya
+- Kamu bisa ubah timeframe chart — EA tetap berjalan karena logic-nya tidak bergantung pada candle chart aktif
