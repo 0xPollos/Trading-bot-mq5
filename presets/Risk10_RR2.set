@@ -1,0 +1,9 @@
+RiskPercent=10.0
+RewardRatio=2.0
+StopLossPoints=1500
+UseATRforSL=false
+SignalMode=0
+FastMAPeriod=9
+SlowMAPeriod=21
+MaxLots=10.0
+MagicNumber=7777
