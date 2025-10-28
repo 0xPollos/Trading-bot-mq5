@@ -56,7 +56,7 @@ How to load:
 ## 🧭 Recommended Use
 - Pair: `XAUUSD` or volatile pairs  
 - Timeframe: `M5 – H1`  
-- Spread: ≤ 30 points  
+- Spread: ≤ 20 points  
 - Account Type: ECN or Raw  
 - Use **demo account first** to forward test for at least 2 weeks.
 
