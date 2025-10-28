@@ -45,6 +45,14 @@ How to load:
 
 ---
 
+## How to use
+1. Open MetaEditor, create new EA file and paste `AutoCompoundEA.mq5` content.
+2. Compile, attach to XAUUSD chart.
+3. Configure inputs: `RiskPercent=5`, `SignalMode=0/1/2`, `StopLossPoints`, `RR`, etc.
+4. Test on demo account extensively.
+
+---
+
 ## 🧭 Recommended Use
 - Pair: `XAUUSD` or volatile pairs  
 - Timeframe: `M5 – H1`  
