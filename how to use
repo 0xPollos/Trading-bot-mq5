@@ -25,6 +25,7 @@ Pastikan kamu sudah punya:
 - Drag & drop EA AutoCompoundEA ke chart
 - Di tab Inputs, sesuaikan parameter:
 
+==================================================================================================
 | Parameter                | Penjelasan                                                          |
 | ------------------------ | ------------------------------------------------------------------- |
 | **RiskPercent**          | Jumlah risiko tiap trade, default = `5.0` (berarti 5% dari balance) |
@@ -35,6 +36,7 @@ Pastikan kamu sudah punya:
 | **MagicNumber**          | Nomor unik untuk membedakan EA ini dari EA lain                     |
 | **TradeBuy / TradeSell** | Aktifkan hanya buy/sell jika ingin satu arah saja                   |
 | **MaxLots**              | Batas maksimal lot agar EA tidak terlalu agresif                    |
+==================================================================================================
 
   4. Aktifkan AutoTrading
 
@@ -53,12 +55,13 @@ Pastikan kamu sudah punya:
 - Jika loss, lot turun otomatis karena balance turun
 
   6. Pilihan Signal Mode
-
+=============================================================================================================
 | SignalMode | Tipe                     | Ciri                                        | Cocok untuk         |
 | ---------- | ------------------------ | ------------------------------------------- | ------------------- |
 | `0`        | **MA Crossover**         | Entry ketika MA fast menembus MA slow       | Trend following     |
 | `1`        | **FVG (Fair Value Gap)** | Entry di retrace area gap                   | Scalping & intraday |
 | `2`        | **OB (Order Block)**     | Entry di zona OB terakhir sebelum move kuat | Smart money concept |
+=============================================================================================================
 
   📌 Kamu bisa ganti mode ini tanpa ganti EA — cukup ubah "SignalMode" di parameter EA, klik "OK" lagi.
 
